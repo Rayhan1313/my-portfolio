@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayhan's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            /*position: fixed; */
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            padding: 20px;
+        }
+        .about {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .about img {
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 150px;
+            height: 150px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .skills, .experience {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .skill, .job {
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            flex: 1;
+            min-width: 200px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            /*position: fixed; */
+            width: 100%;
+            bottom: 0;
+        }
+        #back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #back-to-top img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rayhan's Portfolio</h1>
+    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <div id="about" class="section">
+            <h2>About Me</h2>
+            <img src="C:\Users\53638\Desktop\W32D120E11G2-DP.png" alt="Rayhan">
+            <p>Hi, I'm Rayhan. I'm a computer engineer proficient in PHP, JavaScript, MySQL, Oracle SQL, HTML, and CSS. I have 2 years of experience in this field.</p>
+        </div>
+        <div id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">PHP</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">MySQL</div>
+                <div class="skill">Oracle SQL</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+            </div>
+        </div>
+        <div id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="experience">
+                <div class="job">
+                    <h3>Software Engineer</h3>
+                    <p>Walton Group</p>
+                    <p>Jan 2022 - Present</p>
+                    <p>Worked on developing and maintaining web applications using PHP and JavaScript.</p>
+                </div>
+                <div class="job">
+                    <h3>Junior Developer</h3>
+                    <p>Walton Group</p>
+                    <p>Jan 2023 - Dec 2023</p>
+                    <p>Assisted in database management and front-end development using MySQL, Oracle SQL, HTML, and CSS.</p>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="section">
+          <div id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: rayhanhimel1997@gmail.com</p>
+            <p>Phone: 01689471687</p>
+        </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Rayhan</p>
+    </footer>
+    <button id="back-to-top" title="Back to top">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/up.png" alt="Up">
+  </button>
+  <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('nav a').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth'
+              });
+          });
+      });
+
+      // Show the back-to-top button when scrolling down
+      window.addEventListener('scroll', function() {
+          const button = document.getElementById('back-to-top');
+          if (window.pageYOffset > 0) {
+              button.style.display = 'block';
+          } else {
+              button.style.display = 'none';
+          }
+      });
+
+      // Smooth scroll to the top when the back-to-top button is clicked
+      document.getElementById('back-to-top').addEventListener('click', function() {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      });
+  </script>
+</body>
+</html>
